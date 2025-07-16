@@ -13,7 +13,9 @@ A modern web application that predicts the sentiment of text using multiple mach
 - ⚡ **Real-time Predictions**: Instant sentiment analysis feedback
 - 🎨 **Modern UI**: Clean and intuitive interface
 
-## Screenshots
+## Demo
+
+![Demo](demo.gif)
 
 
 ## Project Structure
@@ -114,7 +116,7 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Ashmit Gupta
+[Your Name]
 
 ## Acknowledgments
 

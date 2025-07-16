@@ -1,0 +1,180 @@
+/* Base reset and typography */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  background: var(--bg, linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%));
+  color: var(--color, #222);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px;
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow, 0 4px 24px rgba(99, 102, 241, 0.08));
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: var(--color, #222);
+}
+
+/* Shared text color for key elements */
+.container,
+.prediction-form,
+.prediction-result,
+h1,
+h2,
+label,
+select,
+textarea,
+button,
+.theme-toggle,
+.header,
+.footer {
+  color: var(--color, #222);
+}
+
+/* Dark mode text color override */
+.dark-mode .container,
+.dark-mode .prediction-form,
+.dark-mode .prediction-result,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode label,
+.dark-mode select,
+.dark-mode textarea,
+.dark-mode button,
+.dark-mode .theme-toggle,
+.dark-mode .header,
+.dark-mode .footer {
+  color: var(--color, #fff) !important;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111 !important;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.7;
+  color: var(--accent, #6366f1);
+  background: transparent;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--accent, #6366f1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--accent, #6366f1);
+}
+
+/* Form labels and inputs */
+label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  background: #f3f4f6;
+  resize: vertical;
+}
+.dark-mode textarea, .dark-mode select {
+  background: #222 !important;
+  color: #fff !important;
+  border: 1px solid #6366f1 !important;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent, #6366f1);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: #4f46e5;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
+}
+
+/* Dark mode button hover */
+.dark-mode button:hover {
+  background-color: #777;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+/* Prediction form and result cards */
+.prediction-form,
+.prediction-result {
+  background: var(--card-bg, #fff);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow, 0 2px 12px rgba(99, 102, 241, 0.06));
+  padding: 24px;
+  margin-bottom: 24px;
+  color: var(--color, #222);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .container {
+    max-width: 98vw;
+    padding: 12px;
+  }
+  .prediction-form,
+  .prediction-result {
+    padding: 12px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
